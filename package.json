@@ -1,0 +1,19 @@
+{
+  "name": "and-file-io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tadii3108/node-and-file-io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tadii3108/node-and-file-io/issues"
+  },
+  "homepage": "https://github.com/Tadii3108/node-and-file-io#readme"
+}

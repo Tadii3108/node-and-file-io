@@ -21,8 +21,8 @@ class Visitor {
     }
 }
 
-let lwazi = new Visitor("Lwazi Mtshali", 26,"15/01/2020","12:19","comments", "tadiwa");
+let lwazi = new Visitor("Lwazi Mtshali", 26,"15/01/2020","12:19","Well done!", "Tadiwa Zingoni");
 lwazi.save();
 
-let tadi = new Visitor("Tadiwa Zingoni", 21,"15/01/2020","12:20","the calmest ever. pleasing to work with", "marylyn");
+let tadi = new Visitor("Tadiwa Zingoni", 21,"15/01/2020","12:20","Pleasing to work with!", "Lwazi Mtshali");
 tadi.save();

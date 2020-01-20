@@ -1,7 +1,7 @@
 var fs = require('fs');
 
 class Visitor {
-    constructor(fullName, age, dateOfVisit, timeOfVisit,comments, nameOfAssistant) {
+    constructor(fullName, age, dateOfVisit, timeOfVisit, comments, nameOfAssistant) {
         this.fullName = fullName;
         this.age = age;
         this.dateOfVisit = dateOfVisit;
@@ -21,8 +21,8 @@ class Visitor {
     }
 }
 
-let lwazi = new Visitor("Lwazi Mtshali", 26,"15/01/2020","12:19","Well done!", "Tadiwa Zingoni");
-lwazi.save();
+//let lwazi = new Visitor("Lwazi Mtshali", 26,"15/01/2020","12:19","Well done!", "Tadiwa Zingoni");
+//lwazi.save();
 
-let tadi = new Visitor("Tadiwa Zingoni", 21,"15/01/2020","12:20","Pleasing to work with!", "Lwazi Mtshali");
-tadi.save();
+//let tadi = new Visitor("Tadiwa Zingoni", 21,"15/01/2020","12:20","Pleasing to work with!", "Lwazi Mtshali");
+//tadi.save();

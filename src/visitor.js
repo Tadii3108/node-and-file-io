@@ -13,11 +13,22 @@ class Visitor {
     async save() {
         let file = this.fullName.replace(' ', '_').toLowerCase();
 
-        fs.appendFile(`visitor_${file}.json`, JSON.stringify(this, null, 4), function (err) {
+        fs.writeFile(`visitor_${file}.json`, JSON.stringify(this, null, 4), function (err) {
             if (err) throw err;
             console.log('Saved!');
         });
         
     }
 }
+
+async function load(fullName) {
+    let file = fullName.replace('_', ' ').toLowerCase();
+
+    fs.readFile(`visitor_${file}.json`, 'utf8', (err, data) => {
+         if(err) throw err;
+        console.log(data);
+    });
+}
+
 module.exports = Visitor;
+module.exports = load;

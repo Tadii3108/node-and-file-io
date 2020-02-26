@@ -10,7 +10,7 @@ class Visitor {
         this.nameOfAssistant = nameOfAssistant;
     }
 
-    async save() {
+    save() {
         let file = this.fullName.replace(' ', '_').toLowerCase();
 
         fs.writeFile(`visitor_${file}.json`, JSON.stringify(this, null, 4), function (err) {
@@ -19,16 +19,21 @@ class Visitor {
         });
         
     }
+
+    load(fullName) {
+        let file = fullName.replace(' ', '_').toLowerCase();
+    
+        fs.readFile(`visitor_${file}.json`, 'utf8', (err, data) => {
+             if(err) throw err;
+            console.log(data);
+        });
+    }
 }
 
-async function load(fullName) {
-    let file = fullName.replace('_', ' ').toLowerCase();
 
-    fs.readFile(`visitor_${file}.json`, 'utf8', (err, data) => {
-         if(err) throw err;
-        console.log(data);
-    });
-}
 
 module.exports = Visitor;
-module.exports = load;
+var person;
+person = new Visitor('Will Smith',50,'16/06/2020','22:30','Out','Picket');
+person.save();
+//person.load('Will Smith');

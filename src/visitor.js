@@ -34,6 +34,6 @@ class Visitor {
 
 module.exports = Visitor;
 var person;
-person = new Visitor('Will Smith',50,'16/06/2020','22:30','Out','Picket');
-person.save();
-//person.load('Will Smith');
+person = new Visitor('Wasdgon',50,'16/06/2099','00:01','above average','Nogdsaw');
+//person.save();
+person.load("Will Smith");

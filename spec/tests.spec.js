@@ -3,7 +3,6 @@ const Visitor = require('../src/visitor');
 
 var myJSON;
 
-
 let instance_of = {
     fullName: 'John Doe',
     age: 89,
@@ -24,8 +23,8 @@ instance_of.nameOfAssistant
 
 let file = visitor.fullName.replace(' ', '_').toLowerCase();
 
-describe('save() function ', function (){
-    it('must be a function', function () {
+describe('save() function ', function(){
+    it('must be a function', function() {
             expect(visitor.save).toBeTruthy();
         });
     });
@@ -44,16 +43,16 @@ describe('save function', function () {
 });
 
 
-describe('load() function ', function (){
-    it('must be a function', function () {
+describe('load() function ', function(){
+    it('must be a function', function() {
             expect(visitor.load).toBeDefined();
         });
     });
 
-describe('the load function', function () {
+describe('the load function', function() {
     var info = fs.readFileSync(`visitor_${file}.json`,"utf8");
     myJSON = JSON.parse(info)
-    it('should load the .json file', function  () {
+    it('should load the .json file', function() {
         expect(instance_of).toEqual(myJSON);
     });
 });
